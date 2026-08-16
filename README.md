@@ -211,10 +211,7 @@ cd flask-student-app
 ### Screenshot
 <img width="1888" height="939" alt="Screenshot 2026-08-16 015549" src="https://github.com/user-attachments/assets/9c05e8ac-69ba-4b2f-a896-3d616fa8d7c0" />
 
-```bash
 git status
-```
-### Screenshot
 <img width="1008" height="882" alt="Screenshot 2026-08-16 015822" src="https://github.com/user-attachments/assets/40249045-4d2e-465e-a746-c1c091417d9d" />
 
 The same GitHub repository can be updated later. 
