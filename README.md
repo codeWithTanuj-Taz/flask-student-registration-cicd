@@ -206,15 +206,19 @@ flask-student-app/
 
 ```bash
 git clone https://github.com/codeWithTanuj-Taz/flask_Practice
-cd flask-student-app
+
 ```
 ### Screenshot
 <img width="1888" height="939" alt="Screenshot 2026-08-16 015549" src="https://github.com/user-attachments/assets/9c05e8ac-69ba-4b2f-a896-3d616fa8d7c0" />
 
+```bash
 git status
-<img width="1008" height="882" alt="Screenshot 2026-08-16 015822" src="https://github.com/user-attachments/assets/40249045-4d2e-465e-a746-c1c091417d9d" />
+dir
+```
 
-The same GitHub repository can be updated later. 
+You should see files/folders from the original Flask project.
+
+<img width="1008" height="882" alt="Screenshot 2026-08-16 015822" src="https://github.com/user-attachments/assets/40249045-4d2e-465e-a746-c1c091417d9d" />
 
 ---
 
@@ -234,12 +238,12 @@ Activate:
 .\venv\Scripts\Activate.ps1
 ```
 
-Linux:
+### ScreenShots 
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
+<img width="2166" height="726" alt="Screenshot 2026-07-20 123057" src="https://github.com/user-attachments/assets/a34f8153-e962-48e7-aad6-fd85178a4d7a" />
+
+<img width="1683" height="42" alt="Screenshot 2026-08-17 035017" src="https://github.com/user-attachments/assets/9f72a373-d4c4-44d1-ae96-128f233fa3d9" />
+
 
 ## 9.2 Install Dependencies
 
@@ -247,17 +251,19 @@ source venv/bin/activate
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
+###Screenshot
+<img width="1762" height="892" alt="Screenshot 2026-07-20 123069" src="https://github.com/user-attachments/assets/a9d06a86-42e1-4b5c-bbc7-815a8bc6e09b" />
+<img width="1754" height="897" alt="Screenshot 2026-07-20 765834" src="https://github.com/user-attachments/assets/bc63defd-8643-4145-b1f4-61d94d1d9dc7" />
 
-## 9.3 Configure Environment Variables
 
-Create a local `.env` file for development:
 
-```text
-MONGO_URI=<YOUR_MONGODB_URI>
-SECRET_KEY=<YOUR_SECRET_KEY>
+## 9.3 Check pytest
+
+```bash
+pytest
 ```
+<img width="1367" height="297" alt="Screenshot 2026-08-16 083747" src="https://github.com/user-attachments/assets/ff716326-cb8c-4b97-9e77-dd7a6a10a046" />
 
-Do not commit `.env`.
 
 ## 9.4 Start Flask
 
@@ -279,74 +285,8 @@ curl http://localhost:5000/health
 
 ---
 
-# 10. MongoDB Atlas Setup
 
-MongoDB Atlas provides the cloud database.
-
-## Step 1 – Create Cluster
-
-1. Log in to MongoDB Atlas.
-2. Create a cluster.
-3. Wait until the cluster is available.
-
-> During development, the cluster was found to be paused. The cluster was resumed before deployment testing.
-
-## Step 2 – Create Database User
-
-Create a MongoDB database user.
-
-Store the username and password securely.
-
-## Step 3 – Configure Network Access
-
-Allow the EC2 application to connect to MongoDB Atlas.
-
-For production, use the most restrictive network configuration possible.
-
-## Step 4 – Generate Connection String
-
-General format:
-
-```text
-mongodb+srv://<username>:<password>@<cluster>.mongodb.net/<database>?appName=<application-name>
-```
-
-Example structure:
-
-```text
-mongodb+srv://USERNAME:PASSWORD@travelmemory01.rgptdx3.mongodb.net/student_db?appName=Travelmemory01
-```
-
-The password must be URL-safe/URL-encoded if it contains characters requiring encoding.
-
-## Step 5 – Store URI
-
-Store the complete URI as:
-
-```text
-MONGO_URI
-```
-
-in GitHub Secrets.
-
-## MongoDB Verification
-
-The deployed container was tested directly with PyMongo:
-
-```bash
-sudo docker exec flask-student-app python -c \
-"import os; from pymongo import MongoClient; MongoClient(os.environ['MONGO_URI'], serverSelectionTimeoutMS=10000).admin.command('ping'); print('MongoDB authentication successful')"
-```
-
-Expected:
-
-```text
-MongoDB authentication successful
-```
-
----
-
-# 11. Docker Configuration
+# 10. Docker Configuration
 
 The Flask application is containerized using Docker.
 
