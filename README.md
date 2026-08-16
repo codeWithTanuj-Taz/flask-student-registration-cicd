@@ -7,46 +7,7 @@
 ![Flask](https://img.shields.io/badge/Framework-Flask-black)
 ![MongoDB](https://img.shields.io/badge/Database-MongoDB%20Atlas-green)
 
-## Table of Contents
 
-1. [Project Overview](#1-project-overview)
-2. [Project Objectives](#2-project-objectives)
-3. [Architecture](#3-architecture)
-4. [Technologies Used](#4-technologies-used)
-5. [Application Features](#5-application-features)
-6. [Project Structure](#6-project-structure)
-7. [Prerequisites](#7-prerequisites)
-8. [Clone the Repository](#8-clone-the-repository)
-9. [Run the Flask Application Locally](#9-run-the-flask-application-locally)
-10. [MongoDB Atlas Setup](#10-mongodb-atlas-setup)
-11. [Docker Configuration](#11-docker-configuration)
-12. [AWS ECR Setup](#12-aws-ecr-setup)
-13. [EC2 Setup](#13-ec2-setup)
-14. [EC2 IAM Role](#14-ec2-iam-role)
-15. [EC2 Security Group](#15-ec2-security-group)
-16. [GitHub OIDC and IAM Role](#16-github-oidc-and-iam-role)
-17. [GitHub Secrets](#17-github-secrets)
-18. [GitHub Actions CI/CD Workflow](#18-github-actions-cicd-workflow)
-19. [Complete CI/CD YAML](#19-complete-cicd-yaml)
-20. [Pipeline Stages Explained](#20-pipeline-stages-explained)
-21. [Docker Image Tagging](#21-docker-image-tagging)
-22. [ECR Immutable Tags](#22-ecr-immutable-tags)
-23. [Deployment to EC2](#23-deployment-to-ec2)
-24. [Deployment Health Check](#24-deployment-health-check)
-25. [Manual Deployment](#25-manual-deployment)
-26. [End-to-End Verification](#26-end-to-end-verification)
-27. [Troubleshooting](#27-troubleshooting)
-28. [Useful EC2 Commands](#28-useful-ec2-commands)
-29. [Security Considerations](#29-security-considerations)
-30. [Screenshots and Evidence](#30-screenshots-and-evidence)
-31. [Email Notifications](#31-email-notifications)
-32. [Assignment Checklist](#32-assignment-checklist)
-33. [Final Architecture](#33-final-architecture)
-34. [Final Result](#34-final-result)
-35. [Future Improvements](#35-future-improvements)
-36. [Repository](#36-repository)
-
----
 
 # 1. Project Overview
 
@@ -178,29 +139,6 @@ The project was designed to demonstrate the following:
 
 ---
 
-# 4. Technologies Used
-
-| Technology | Purpose |
-|---|---|
-| Python | Application development |
-| Flask | Web application framework |
-| Flask-PyMongo | MongoDB integration |
-| PyMongo | MongoDB driver |
-| MongoDB Atlas | Cloud database |
-| pytest | Automated testing |
-| Black | Python code-quality/format check |
-| Docker | Containerization |
-| Git | Version control |
-| GitHub | Source-code repository |
-| GitHub Actions | CI/CD automation |
-| Amazon ECR | Docker image registry |
-| Amazon EC2 | Application hosting |
-| AWS IAM | Access control |
-| GitHub OIDC | GitHub-to-AWS authentication |
-| Ubuntu | EC2 operating system |
-
----
-
 # 5. Application Features
 
 ## Application Routes
@@ -264,41 +202,22 @@ flask-student-app/
 
 ---
 
-# 7. Prerequisites
-
-## Local Machine
-
-Install:
-
-- Git
-- Python
-- Docker
-- GitHub account
-- AWS account
-- MongoDB Atlas account
-
-## AWS
-
-Required AWS resources:
-
-1. Amazon ECR repository
-2. Ubuntu EC2 instance
-3. EC2 IAM role
-4. GitHub Actions IAM role
-5. Security Group
-6. Internet connectivity
-7. GitHub OIDC trust configuration
-
----
-
-# 8. Clone the Repository
+# 8. Clone the Repository to VS code(local)
 
 ```bash
-git clone <YOUR-GITHUB-REPOSITORY-URL>
+git clone https://github.com/codeWithTanuj-Taz/flask_Practice
 cd flask-student-app
 ```
+### Screenshot
+<img width="1888" height="939" alt="Screenshot 2026-08-16 015549" src="https://github.com/user-attachments/assets/9c05e8ac-69ba-4b2f-a896-3d616fa8d7c0" />
 
-The same GitHub repository can be updated later. The repository URL does not change when README, workflow, or application files are modified and pushed.
+```bash
+git status
+```
+### Screenshot
+<img width="1008" height="882" alt="Screenshot 2026-08-16 015822" src="https://github.com/user-attachments/assets/40249045-4d2e-465e-a746-c1c091417d9d" />
+
+The same GitHub repository can be updated later. 
 
 ---
 
