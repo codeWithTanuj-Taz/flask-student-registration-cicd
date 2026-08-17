@@ -277,6 +277,9 @@ Application:
 http://localhost:5000
 ```
 
+<img width="1893" height="653" alt="image" src="https://github.com/user-attachments/assets/0389135a-b3f8-4ed3-aea3-6e3aaca53783" />
+
+
 ## 9.5 Test Health
 
 ```bash
